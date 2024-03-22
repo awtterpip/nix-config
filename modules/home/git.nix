@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+    home.file.".ssh/allowed_signers".text =
+    "* ${builtins.readFile /home/piper/.ssh/id_ed25519.pub}";
+
   programs.git = {
     enable = true;
 
@@ -6,8 +9,10 @@
     userEmail = "awtterpip@gmail.com";
 
     extraConfig = {
-      init.defaultBranch = "main";
-      credential.helper = "store";
+      # Sign all commits using ssh key
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
     };
   };
 
