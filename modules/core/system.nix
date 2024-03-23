@@ -23,6 +23,7 @@
     wget
     helvum
     pulseaudio
+    inputs.alejandra.defaultPackage.${pkgs.system}
     git
   ];
 
