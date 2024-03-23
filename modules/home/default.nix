@@ -12,6 +12,7 @@
     ++ [(import ./floorp)] # firefox based browser
     # ++ [(import ./gaming)]
     ++ [(import ./git.nix)]
+    ++ [(import ./direnv.nix)]
     ++ [(import ./gtk.nix)]
     ++ [(import ./hyprland)]
     ++ [(import ./kitty.nix)]
