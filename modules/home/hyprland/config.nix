@@ -3,7 +3,8 @@
     extraConfig = "
       $mainMod = SUPER
 
-      monitor=DP-3,1920x1080@144,0x0,auto
+      monitor=DP-3,highres,0x0,1
+      monitor=,highres,auto,1
 
       # autostart
       exec-once = systemctl --user import-environment &

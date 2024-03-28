@@ -5,12 +5,15 @@
     driSupport = true;
     driSupport32Bit = true;
 
-    extraPackages = with pkgs; [ 
-      amdvlk 
+    extraPackages = with pkgs; [
+      amdvlk
       rocmPackages.clr.icd
     ];
-    extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
+    extraPackages32 = [pkgs.driversi686Linux.amdvlk];
   };
   hardware.enableRedistributableFirmware = true;
+
+  hardware.opentabletdriver.enable = true;
+
   powerManagement.cpuFreqGovernor = "performance";
 }

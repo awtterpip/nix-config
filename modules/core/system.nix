@@ -23,6 +23,7 @@
     wget
     helvum
     pulseaudio
+    krita
     inputs.alejandra.defaultPackage.${pkgs.system}
     git
   ];
